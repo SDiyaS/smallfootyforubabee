@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footy For U Babe 🐥</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Footy For U Babe 🐥 </h1>
+            <p>Score all 5 goals to unlock special messages!</p>
+        </header>
+        
+        <div class="game-info">
+            <div class="score-display">
+                <span>Goals: <span id="goals-scored">0</span>/5</span>
+            </div>
+            <div class="balls-remaining">
+                <span>Ball: <span id="current-ball">1</span></span>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+        
+        <div class="instructions">
+            <p>Click and drag to aim, release to shoot! Score all 5 goals without missing!</p>
+        </div>
+
+        <div id="message-modal" class="message-modal hidden">
+            <div class="message-content">
+                <h2>Goal! 🎉</h2>
+                <p id="love-message"></p>
+                <button id="next-ball-btn">Next Ball ➡️</button>
+            </div>
+        </div>
+
+        <div id="game-over-modal" class="message-modal hidden">
+            <div class="message-content">
+                <h2>Game Over! 💔</h2>
+                <p>You missed! Starting over from the beginning...</p>
+                <button id="restart-btn">Try Again 🔄</button>
+            </div>
+        </div>
+
+        <div id="victory-modal" class="message-modal hidden">
+            <div class="message-content">
+                <h2>Congratulations! 💖</h2>
+                <p>You've seen all the messages! You're amazing! 🌟</p>
+                <button id="play-again-btn">Play Again 🎮</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
